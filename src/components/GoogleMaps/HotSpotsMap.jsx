@@ -1,21 +1,22 @@
 import React from 'react';
-import { withScriptjs, withGoogleMap, GoogleMap, OverlayView } from 'react-google-maps';
+import { useAsync } from "react-async";
+import { withScriptjs, withGoogleMap, GoogleMap, OverlayView, Marker } from 'react-google-maps';
 
 import './HotSpotsMap.css';
 
 const HotSpotsMap = ({position}) => {
 
-    const { latitude, longitude } = position.coords.latitude;
+    // const { latitude, longitude } = position;
 
     return ( 
 
         <GoogleMap
-            defaultZoom={10}
-            defaultCenter={{ lat: position.coords.latitude, lng: position.coords.longitude}}
+            defaultZoom={14}
+            defaultCenter={{ lat: position.latitude, lng: position.longitude}}
         >
             <OverlayView
                 mapPaneName={OverlayView.OVERLAY_LAYER}
-                position={{ lat: 41.390205, lng: 2.154007}}
+                position={{ lat: position.latitude, lng: position.longitude}}
                 // getPixelPositionOffset={}
             >
                 <div className="infobox">
@@ -24,7 +25,7 @@ const HotSpotsMap = ({position}) => {
                     </div>
                 </div>
             </OverlayView>
-            {/* <Marker position={{ lat: 47.444, lng: -122.176}} /> */}
+            <Marker position={{ lat: position.latitude, lng: position.longitude}} />
 
         </GoogleMap>
     );

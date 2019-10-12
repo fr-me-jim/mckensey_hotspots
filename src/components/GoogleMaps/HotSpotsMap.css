@@ -7,9 +7,11 @@
     padding: 1.5rem;
     background-color: lightcoral;
     opacity: 0.75;
-    width: 10rem;
+    width: 15rem;
+    position: absolute;
+    top: -24.0625rem;
 }
 .info-message {
-    font-size: .8rem;
+    font-size: 1rem;
     color: white;
 }
