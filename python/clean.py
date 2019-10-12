@@ -39,15 +39,9 @@ for i in da:
         try:
             if da[i].value_counts()["-1"] < len(da[i]) * .05:
                 #delete -1
-                print(da.index[da[i] == "-1"].tolist())
-                da.drop(da.index[da[i] == "-1"].tolist(), axis = 0)
-
-                try:
-                     print(da[i].value_counts()["-1"])
-
-                     print("Ok: " + i)
-                except:
-                    print("Delete: " + i)
+                indexs = da.index[da[i] == "-1"].tolist()
+                da.drop(indexs, axis = 0, inplace=True)
+                print("Ok: " + i)
             else:
                 #problematic colums
                 print("Ko: " + i)
