@@ -1,0 +1,15 @@
+.maps {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.infobox {
+    padding: 1.5rem;
+    background-color: lightcoral;
+    opacity: 0.75;
+    width: 10rem;
+}
+.info-message {
+    font-size: .8rem;
+    color: white;
+}
