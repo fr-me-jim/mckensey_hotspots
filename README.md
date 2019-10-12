@@ -1,6 +1,6 @@
 # McKensey HotSpots
 
-Platform for consultation of the current traffic status and hotspots (most danger zones due to climate conditions, past events, etc...).
+>Platform for consultation of the current traffic status and hotspots (most danger zones due to climate conditions, past events, etc...).
 
 ## Description
 
